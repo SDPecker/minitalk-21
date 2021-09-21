@@ -6,18 +6,17 @@
 /*   By: amohiam <amohiam@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/05 15:34:33 by amohiam           #+#    #+#             */
-/*   Updated: 2021/09/21 15:28:27 by amohiam          ###   ########.fr       */
+/*   Updated: 2021/09/21 15:32:26 by amohiam          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-
-
 void	get_bits(int bit)
 {
 	static int	symbol;
 	static int	bit_count;
+
 	symbol += ((bit & 1) << bit_count);
 	bit_count++;
 	if (bit_count == 7)
